@@ -1,4 +1,6 @@
 package builder;
+import java.util.ArrayList;
+
 import carrols.Carrols;
 import mcDonalds.*;
 public class Customer {
@@ -21,7 +23,7 @@ public class Customer {
 		
 		System.out.println("Next: ");
 		Carrols herbert = new Carrols();
-		String order2;
+		ArrayList <String> order2 = new ArrayList();
 		herbert.setTopBun();
 		herbert.setBottomBun();
 		herbert.setCheese();
@@ -30,9 +32,14 @@ public class Customer {
 		herbert.setSalad();
 		herbert.setSauce();
 		herbert.setCheese();
-		order2 = herbert.getBurger().toString();
+		order2 = herbert.getBurger();
 		System.out.println("Club burger");
-		System.out.println(order2);
+		int i =0;
+		for ( i=0; i<order2.size();i++) {
+			System.out.println(order2.get(i));
+		}
+		
+		//System.out.println(order2);
 	}
 
 }
